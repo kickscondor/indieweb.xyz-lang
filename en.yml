@@ -89,7 +89,7 @@ submit: |
   <p>If you've done the three steps from that page and now need to force a
   Webmention, well, without any ado:</p>
 
-  <form id="forcesub" method="POST" action="/webmention">
+  <form id="forcesub" method="POST" action="/webmention/{{lang}}">
     <h3>Link to Your Blog Entry</h3>
     <input class="entry" type="text" name="source" value="" />
 
