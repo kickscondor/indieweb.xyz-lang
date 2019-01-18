@@ -30,6 +30,10 @@ Some entries have special syntax.
 * The `{{lang}}` placeholder is replaced on the site with the language code
   created earlier.
 
+Please note: **For any keys which are not included in the translation, the site
+will default to the English text.** This means that you can translate important
+pieces and gradually move the site to that language.
+
 ## URLs for Each Language
 
 The language code is also used in the URLs for Indieweb.xyz pages.
