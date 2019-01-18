@@ -1,0 +1,387 @@
+id: 0
+subs:
+  ask-xyz:
+    autopost: askxyz
+    xpost: true
+    note: |
+      Any posts that start with <strong>Ask XYZ</strong> will be crossposted here.
+      Crossposting is on by default here!
+  show-xyz:
+    autopost: showxyz
+    xpost: true
+    note: |
+      Any posts that start with <strong>Show XYZ</strong> will be crossposted here.
+      Crossposting is on by default here!
+  indieweb:
+    note: |
+      I hope you are also syndicating to <a href="https://news.indieweb.org">news.indieweb.org</a>!
+  hottubs:
+    note: |
+      This sub is used for testing!
+test-sub: hottubs
+
+#
+# Viewing subs.
+#
+title: Indieweb.xyz
+home: |
+  <p>Welcome to Indieweb.xyz! A syndication service organized by topic.</p>
+  <ul>
+    <li>Wondering? <a href="/about/{{lang}}">What is Indieweb.xyz?</a></li>
+    <li>We keep a <a href="/blogs/{{lang}}">directory</a> of the blogs that post here.</li>
+    <li>Want to join in? <a href="/howto/{{lang}}">How to Post on Indieweb.xyz.</a></li>
+  </ul>
+
+  <p>Here's the recent activity out there:</p>
+mike: |
+  "Hi, I'm Mike! I'm a skier!"
+blogs-title: Blogs of Indieweb.xyz
+blogs: |
+  <p>This is a directory of the blogs that have posted here. I'm hoping to build a
+  good directory of Indieweb blogs by topic. If you want to be listed, simply send a
+  <a href="/howto/{{lang}}">Webmention</a>!</p>
+sub-list-title: The Subs of Indieweb.xyz
+sub-list: |
+  <p>This is a full list of the subs, ordered by recent activity.</p>
+empty-sub: |
+  <p>There have been no posts to this sub. Give it a <a href="/howto/{{lang}}">go</a>!</p>
+bookmarks: |
+  Bookmarks to {{title}}
+no-bookmarks: |
+  <p>There have been no bookmarks to this link.</p>
+no-user: |
+  <p>No such user exists.</p>
+
+#
+# Time display. ('X' is a placeholder.)
+#
+last-posted: last posted
+seconds-ago: less than a minute ago
+minute-ago:  1 minute ago
+minutes-ago: X minutes ago
+hour-ago:    about 1 hour ago
+hours-ago:   about X hours ago
+day-ago:     1 day ago
+days-ago:    X days ago
+month-ago:   about 1 month ago
+months-ago:  X months ago
+year-ago:    about 1 year ago
+years-ago:   over X years ago
+
+#
+# Link submission pages.
+#
+submit-title: Submit a Link
+submit: |
+  <p>This page technically <strong>does not</strong> let you submit any old
+  link. You can only use this page to force a Webmention, if your blog software
+  doesn't support it.</p>
+
+  <p>This means you still need to have <strong>the sub link in the blog entry</strong>
+  that you are submitting. (As described <a href="/howto/{{lang}}">here</a>!)</p>
+
+  <p>If you've done the three steps from that page and now need to force a
+  Webmention, well, without any ado:</p>
+
+  <form id="forcesub" method="POST" action="/webmention">
+    <h3>Link to Your Blog Entry</h3>
+    <input class="entry" type="text" name="source" value="" />
+
+    <h3>Name of the Sub</h3>
+    <input class="entry" type="text" name="target" value="/{{lang}}/hottubs" />
+    <p>(<em>/{{lang}}/hottubs</em> is our testing sub.)</p>
+
+    <input class="button" name="submit" type="submit" />
+  </form>
+
+submitted-title: "Okie, Sweet!"
+submitted: |
+  <p>Your link has been force-mentioned. Look for it to show up soon
+  <a href="{{link}}">on the sub</a>.</p>
+
+#
+# Help pages.
+#
+about-title: "What is Indieweb.xyz?"
+about: |
+  <p>Indieweb.xyz is a syndication service&mdash;meaning you can notify us when
+  you've posted on your blog and we'll link back to you. The whole thing is organized
+  like Reddit into <em>subs</em>, which are topic-based (usually) collections of links.</p>
+
+  <p>The trick is: <u>you may only post to one sub</u>. <em>(If you post to multiple subs,
+  those additional posts are marked as crossposts, which no one sees by default.)</em></p>
+
+  <p>Ok, if you're ready to start posting, <a href="/howto/{{lang}}">here's</a> how. You can also use
+  Indieweb.xyz to submit links from other places and to <em>upvote</em>
+  links&mdash;both are accomplished through <a href="/howto/bookmark/{{lang}}">bookmarks</a>.
+
+  <h3>What's Wrong With Just Using Reddit?</h3>
+
+  <p>I realize I just made a Reddit comparison, but that only applies to the organization
+  by sub.</p>
+
+  <p>Everything else is different:</p>
+
+  <ul>
+    <li><strong>Self-promotion is encouraged.</strong> You have material that you
+      are writing or building and you want a community to see it. This whole site
+      facilitates that.</li>
+    <li><strong>Your posts are on your blog.</strong> Rather than posting on a
+      social media site where layout options are limited and you are thrown into
+      a busy plaza where everyone is talking, on Indieweb.xyz a link to you
+      redirects to <em>your</em> blog
+      with your own unusual design and your own history.</li>
+    <li><strong>No algorithm.</strong> Neither upvotes nor your past habits influence
+      the sub. The newest entries appear first. (This has the nice side effect of
+      pushing a link to the top when it is <em>bookmarked</em> again, since it is
+      considered updated.)</li>
+  </ul>
+
+  <p>There are massive advantages to Reddit: lots of users, wikis and moderation,
+  and your stuff will likely live on there forever.</p>
+
+  <p>So do both. Share here <em>and</em> there.</p>
+
+  <h3>Is Indieweb.xyz a Silo?</h3>
+
+  <p>Ok, so. Yes. Sort of. But here's the thing.</p>
+
+  <p>Even in a decentralized world, you still need some silos. You need a central
+  point of discovery. Otherwise, everything is dispersed and detached with only
+  small connections&mdash;no large, exhaustive ones. Wikipedia is a silo&mdash;a useful one!</p>
+
+  <p>Ok, but the good thing is: Indieweb.xyz stores very little! It doesn't store your
+  posts or your comments. It simply stores a link to you. And any metadata I can get
+  from that link.</p>
+
+  <p>This means that anyone else out there can link to that stuff and I own nothing.
+  You can change all your syndication links to a new silo in a few minutes. Fire off
+  your Webmentions and you're setup somewhere else. Webmentions can be troublesome,
+  but this is the amazing benefit of them.</p>
+
+  <h3>What About Spam?</h3>
+
+  <p>Well, yes. So&mdash;fighting spam requires an algorithm or a lot of manual
+  work. Spam is an unsolved topic for now.</p>
+
+  <p>Thing is: the Modern Web has traded spam for clickbait. The algorithms are
+  there to prevent spam. So spam has now figured out how to game the system.</p>
+
+  <p>On the bright side, there is no (and will be no) advertising here. So that's
+  a start!</p>
+
+  <h3>I Want to Read More!</h3>
+
+  <p>Sure, sure. Settle down. There's a bit more.</p>
+
+  <p>Like these:</p>
+
+  <ul>
+    <li><a href="/howto/{{lang}}">How to Post on Indieweb.xyz.</a></li>
+    <li><a href="/howto/bookmark/{{lang}}">How to Bookmark.</a></li>
+    <li><a href="/howto/subs/{{lang}}">How to Use Subs.</a></li>
+  </ul>
+
+  <p>Please enjoy your stay!</p>
+
+howto-menu: How to
+howto-post-menu: Post.
+howto-bookmark-menu: Bookmark.
+howto-sub-menu: Use Subs.
+
+howto-post-title: How to Post on Indieweb.xyz
+howto-bookmark-title: How to Bookmark on Indieweb.xyz
+howto-sub-title: How to Use Subs on Indieweb.xyz
+
+howto-post: |
+  <p>So you've got an essay to share? Or a comment to make on one of our subs? And,
+  strangely enough, there's no box to log in!</p>
+
+  <p>Yeah, well, I'm not responsible for any of that. You'll have to do all that
+  from your own blog. If your blog is set up with
+  <a href="https://indieweb.org/webmention">Webmentions</a>, then it's pretty
+  simple:</p>
+
+  <ol>
+    <li>Write the essay or the comment out on your blog as an entry.<br />
+      <span class="note">(Your blog entry must be surrounded by <a href="http://microformats.org/wiki/h-entry">class="h-entry"</a>.)</span></li>
+    <li>Add a link in that blog entry <u>to the indieweb.xyz sub</u> you want to post to.<br />
+      <span class="note">(And that link must be marked <a href="https://indieweb.org/u-syndication">class="u-syndication"</a>.)</span></li>
+    <li>Publish the entry.</li>
+  </ol>
+
+  <p>Your blog software should fire off the Webmention to Indieweb.xyz and your
+  post should show up on the sub you linked to.</p>
+
+  <h3>Doing It With Style</h3>
+
+  <p>Since you're going to have to link to the sub, why not make it look good?
+  The simplest way of doing this is to just put the link at the end of your post
+  like this:</p>
+
+  <blockquote>
+  <p><em>This was also posted to
+  <a href="https://indieweb.xyz/{{lang}}/hottubs" class="u-syndication">/{{lang}}/hottubs</a>.</em></p>
+  </blockquote>
+
+  <p>The code for this is:</p>
+
+  <textarea>
+  <p><em>This was also posted to
+  <a href="https://indieweb.xyz/{{lang}}/hottubs" class="u-syndication">/{{lang}}/hottubs</a>.</em></p>
+  </textarea>
+
+  <p>Better yet, consider putting this link in with the blog entry details - wherever
+  you put the time, number of comments, etc. for the entry.</p>
+
+  <p><strong>You can only directly post to one sub!</strong> Whichever Indieweb.xyz link
+  is discovered first in your post is the one that will be used.</p>
+
+  <p>Links beyond the first are treated as <em>cross-posting</em>. You may crosspost
+  to other subs if you like. Just keep in mind that most people will have cross-posting
+  turned off.</p>
+
+  <h3>Indieweb.xyz Etiquette</h3>
+
+  <p>Well, this isn't just about good etiquette. You may run into our spam filter if you
+  post to too many different subs or fire off too many Webmentions.</p>
+
+  <p>Subs will be less valuable if you treat them like hashtags. Rather than filling a
+  post with hashtags that will fire off in all directions&mdash;which devalues the
+  hashtag&mdash;you commit to a single sub. This increases the value of that sub
+  because you're invested in using it.</p>
+
+  <p>Beyond a spam filter, Indieweb.xyz has no tools for reporting links or domains.
+  In a way, it operates more like a mailing list where anyone can post and we all
+  end up driving each other crazy! (Really, the larger a community gets, the higher
+  the chances are that someone in the group will drive you nuts.)</p>
+
+  <p>So please try to be polite, active without spamming, give the benefit of the
+  doubt. And, failing that, write an extension yourself to killfile the scum.
+  But, no, this is the Indieweb&mdash;<a href="https://indieweb.org/code-of-conduct">here</a>
+  are the rules.</p>
+
+  <h3>What If My Blog Doesn't Have Webmentions?</h3>
+
+  <p>Well then you're going to need to submit your link by hand. <a href="/submit/{{lang}}">Right here.</a></p>
+
+  <p>But, yeah, get Webmentions. This will get tiresome.</p>
+
+  <h3>Why Is This All So CONVUHLUTED??</h3>
+
+  <p>Wait, is that bad? Ok, yeah, it's bad. It's bad. It's fun? Yeah, of course
+  it's fun. It's bad!</p>
+
+  <p>Think of it like this: all the work has been moved to your blog.
+  Rather than to a social&mdash; sosh&mdash; a search engine or a soshulll&mdash;
+  gluggluglug. I'm sorry my gag reflex is preventing me from finishing this
+  paragraph!</p>
+
+  <p>The benefit is that people will read your posts on your actual blog.
+  This could be nice for you!</p>
+
+  <h3>What Do I Do If I Run Into a Problem?</h3>
+
+  <p>I am working on a good answer to this!</p>
+
+  <h3>How Long Will This Site Even Be Up?</h3>
+
+  <p>Two years at least. That puts us at July 2020. If it's still quite useful
+  at that time, I'll continue it.</p>
+
+  <h3>I'm a Nerd&mdash;Anything Else Advanced That I Can Do?</h3>
+
+  <p>For sure. If you want to trick out your user page, you'll need
+  all of the following setup on your blog:</p>
+
+  <ul>
+    <li>Get an <a href="https://indieweb.org/h-card">h-card</a>.</li>
+    <li>Use <a href="https://brid.gy/">brid.gy</a> to connect your Twitter
+      and all that if you honestly need it.</li>
+    <li>Mentions from <em>rel="me"</em> links will be grouped under your name.</li>
+  </ul>
+
+  <p>I don't know. You're the nerd. Nerd out on IndieWeb idealism!</p>
+
+howto-bookmark: |
+  <p>Okay, so this is Level Two in your training. Here's how to share a link to
+  another blog. Don't worry if the link has already been posted. On Indieweb.xyz,
+  a reposted bookmark counts as a kind of <em>upvote</em>.</p>
+
+  <p>To do this, you post on your blog again. You still do a Webmention, but you
+  also do an Indieweb <a href="https://indieweb.org/bookmark">Bookmark</a>.
+  The process is:</p>
+
+  <ol>
+    <li>Post the bookmark on your blog as a new blog entry.<br />
+      <span class="note">(And that link must be marked <a href="https://indieweb.org/bookmark">class="u-bookmark-of"</a>.)</span></li>
+    <li>Include the Indieweb.xyz sub link in the entry, as described in the <a href="/howto/{{lang}}">How to Post</a>.</li>
+      <span class="note">(The entry must be <a href="http://microformats.org/wiki/h-entry">class="h-entry"</a> with a link marked <a href="https://indieweb.org/u-syndication">class="u-syndication"</a>.)</span></li>
+    <li>Publish the entry.</li>
+  </ol>
+
+  <p>Code for this is along the lines of:</p>
+
+  <textarea rows="7">
+  <p class="p-summary">
+  <a class="u-bookmark-of" href="http://othersite.example.com/permalink47">Othersite's Groundbreaking Permalink47.</a>
+  I did found this to be quite memorable.</p>
+  <p><em>This was also posted to
+    <a href="https://indieweb.xyz/{{lang}}/hottubs" class="u-syndication">/{{lang}}/hottubs</a>.</em>
+  </p>
+  </textarea>
+
+  <p>The link itself will be posted to the sub. Not your blog entry or a link to your blog entry.
+  You will still get credit for posting this on the sub. If someone else has already posted
+  the link, the bookmark count of that link will tick up.</p>
+
+  <p><strong>The same exact link cannot be double-posted.</strong> If you post a duplicate, it
+  will be treated similar to a like or upvote.</p>
+
+  <h3>Can I Use This to Link to Something That Doesn't Use Webmentions?</h3>
+
+  <p>That's insane!! That's just what I was going to talk about!!</p>
+
+  <p>Many times you might want to share directly a PDF of some research or an image.
+  Something you're not tracking Webmentions on.</p>
+
+  <p>Yeah, so. Use this same kind of bookmark!</p>
+
+howto-sub: |
+  <p>How do you create a sub? Simply <a href="/howto/{{lang}}">post</a> to the sub and it will appear!</p>
+
+  <h3>How Does "Show XYZ" Work?</h3>
+
+  <p>The <a href="/{{lang}}/show-xyz">/{{lang}}/show-xyz</a> sub is for putting up your
+  projects for display. Crossposts are allowed here. This way you can show your
+  creation on a relevant sub&mdash;and it'll also show up on the Show XYZ sub.</p>
+
+  <p>Oh and this sub can <em>auto-post</em>. If you start the title of your
+  entry with the phrase <strong>Show XYZ</strong>, it'll be crossposted to
+  /{{lang}}/show-xyz.</p>
+
+  <h3>How Does "Ask XYZ" Works?</h3>
+
+  <p>And the <a href="/{{lang}}/ask-xyz">/{{lang}}/ask-xyz</a> sub works identically!
+  This sub is for asking open questions to anyone watching the sub out there.
+  You can crosspost here safely as well.</p>
+
+  <p>As for auto-posting, same deal: if you start your entry with the phrase
+  <strong>Ask XYZ</strong>, it'll auto-post to /{{lang}}/ask-xyz, too.</p>
+
+  <h3>What is the Hottubs Sub?</h3>
+
+  <p>Oh and <a href="/{{lang}}/hottubs">/{{lang}}/hottubs</a> is the testing sub. Bonus
+  if you post a pleasing bit of encouragement to the spa and whirlpool crowd!</p>
+
+  <p><strong>PLEASE DO NOT POST ABOUT THE 2010 WORLD SAUNA CHAMPIONSHIPS!!</strong>
+  I mean my God.</p>
+
+  <h3>How About the Indieweb Sub?</h3>
+
+  <p>Nothing too special about <a href="/{{lang}}/indieweb">/{{lang}}/indieweb</a> itself.
+  Just want to remind anyone posting to this sub to also post to
+  <a href="https://news.indieweb.org/">IndieNews</a>, the progenitor of this site.
+  The idea for XYZ was born simply by visiting IndieNews.</p>
+
+  <p>Thank you to Aaron Parecki for IndieNews, both its concept and code.</p>

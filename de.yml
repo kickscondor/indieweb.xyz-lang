@@ -1,0 +1,21 @@
+id: 1
+subs:
+  ask-xyz:
+    autopost: askxyz
+    xpost: true
+    note: |
+      Any posts that start with <strong>Ask XYZ</strong> will be crossposted here.
+      Crossposting is on by default here!
+  show-xyz:
+    autopost: showxyz
+    xpost: true
+    note: |
+      Any posts that start with <strong>Show XYZ</strong> will be crossposted here.
+      Crossposting is on by default here!
+  indieweb:
+    note: |
+      I hope you are also syndicating to <a href="https://news.indieweb.org">news.indieweb.org</a>!
+  hottubs:
+    note: |
+      This sub is used for testing!
+
