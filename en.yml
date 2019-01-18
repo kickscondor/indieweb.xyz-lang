@@ -35,6 +35,12 @@ home: |
   <p>Here's the recent activity out there:</p>
 mike: |
   "Hi, I'm Mike! I'm a skier!"
+on: on
+via: via
+authored: authored by
+link: link
+last-noticed: last noticed
+
 blogs-title: Blogs of Indieweb.xyz
 blogs: |
   <p>This is a directory of the blogs that have posted here. I'm hoping to build a
