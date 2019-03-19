@@ -31,4 +31,6 @@ home: |
     <li>Want to join in? <a href="/howto/{{lang}}">How to Post on Indieweb.xyz.</a></li>
   </ul>
 
+  <p>Our most recently used subs:</p>
+recent: |
   <p>Here's the recent activity out there:</p>
