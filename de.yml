@@ -19,3 +19,16 @@ subs:
     note: |
       This sub is used for testing!
 
+#
+# Viewing subs.
+#
+title: Indieweb.xyz
+home: |
+  <p>Welcome to the German-speaking Indieweb.xyz! A syndication service organized by topic.</p>
+  <ul>
+    <li>Wondering? <a href="/about/{{lang}}">What is Indieweb.xyz?</a></li>
+    <li>We keep a <a href="/blogs/{{lang}}">directory</a> of the blogs that post here.</li>
+    <li>Want to join in? <a href="/howto/{{lang}}">How to Post on Indieweb.xyz.</a></li>
+  </ul>
+
+  <p>Here's the recent activity out there:</p>

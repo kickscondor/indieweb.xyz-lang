@@ -15,7 +15,7 @@ changes. The following steps must be taken for this translation to be accepted.
 * **A language code must be created.** For English, the *en* code is used; for
   German, the *de* code. The code is created by adding a
   [YAML](https://www.yaml.org/) document named *code*.yml in the root directory
-  of this repository. (The *lang/en.yml* file should be used as a basis.)
+  of this repository. (The *en.yml* file should be used as a basis.)
 
 * **The text of the file must be translated, but not the 'keys'.** Keys, such
   as `title`, `months-ago` or `howto-menu` should stay in English. The file
